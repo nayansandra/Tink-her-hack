@@ -3,28 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event 1</title>
+    <title>Event 1 Photos</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .photo-gallery {
+            margin-top: 20px;
+        }
+        .photo-gallery img {
+            margin-bottom: 15px; /* Space between images */
+        }
+    </style>
 </head>
 <body>
 
+{% load static %} <!-- Ensure this line is present -->
+
 <div class="container mt-5">
-    <h1>Event 1</h1>
-    <img src="{% static 'images/event1_poster.jpg' %}" alt="Event 1" class="img-fluid mb-3">
+    <h1>Event 1 Photos</h1>
     <p><strong>Date:</strong> January 25, 2025</p>
     <p><strong>Location:</strong> Example Location</p>
-    <p><strong>Description:</strong> This is a brief description of Event 1. It includes details about what attendees can expect.</p>
+    <p><strong>Description:</strong> A brief description of Event 1.</p>
 
-    <!-- Placeholder for images related to Event 1 -->
-    <h2>Photos from Event 1</h2>
-    <div class="row">
-        <div class="col-md-4 mb-4">
+    <!-- Photos from Event 1 -->
+    <div class="row photo-gallery">
+        <div class="col-md-4">
             <img src="{% static 'images/event1_photo1.jpg' %}" alt="Event 1 Photo 1" class="img-fluid">
         </div>
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4">
             <img src="{% static 'images/event1_photo2.jpg' %}" alt="Event 1 Photo 2" class="img-fluid">
         </div>
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4">
             <img src="{% static 'images/event1_photo3.jpg' %}" alt="Event 1 Photo 3" class="img-fluid">
         </div>
     </div>
