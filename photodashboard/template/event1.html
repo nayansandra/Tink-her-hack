@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event 1</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1>Event 1</h1>
+    <img src="{% static 'images/event1_poster.jpg' %}" alt="Event 1" class="img-fluid mb-3">
+    <p><strong>Date:</strong> January 25, 2025</p>
+    <p><strong>Location:</strong> Example Location</p>
+    <p><strong>Description:</strong> This is a brief description of Event 1. It includes details about what attendees can expect.</p>
+
+    <!-- Placeholder for images related to Event 1 -->
+    <h2>Photos from Event 1</h2>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <img src="{% static 'images/event1_photo1.jpg' %}" alt="Event 1 Photo 1" class="img-fluid">
+        </div>
+        <div class="col-md-4 mb-4">
+            <img src="{% static 'images/event1_photo2.jpg' %}" alt="Event 1 Photo 2" class="img-fluid">
+        </div>
+        <div class="col-md-4 mb-4">
+            <img src="{% static 'images/event1_photo3.jpg' %}" alt="Event 1 Photo 3" class="img-fluid">
+        </div>
+    </div>
+
+    <a href="{% url 'home' %}" class="btn btn-primary">Back to Home</a>
+</div>
+
+<script src="//code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

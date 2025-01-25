@@ -27,6 +27,9 @@ urlpatterns = [
     path('', home, name='home'),  # Home page
     path('search/', search, name='search'),
     path('upload/', upload_file, name='upload_file'), 
+    path('event_1/', lambda request: render(request, 'event1.html'), name='event_1'),
+    path('event_2/', lambda request: render(request, 'event2.html'), name='event_2'),
+    path('event_3/', lambda request: render(request, 'event3.html'), name='event_3'),
      # Search page
 ]
 

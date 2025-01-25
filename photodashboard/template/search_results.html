@@ -13,20 +13,27 @@
     <h1>Search Results</h1>
 
     {% if results %}
-        <ul class="list-group">
+        <div class="row">
             {% for result in results %}
-                <li class="list-group-item">{{ result.name }} - {{ result.location }} - {{ result.date }}</li> <!-- Adjust fields as necessary -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="data:image/jpeg;base64,{{ result.photo_display }}" class="card-img-top" alt="{{ result.event_name }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ result.event_name }}</h5>
+                        </div>
+                    </div>
+                </div>
             {% endfor %}
-        </ul>
+        </div>
     {% else %}
-        <p>No results found.</p>
+        <p>No results found for "{{ query }}".</p>
     {% endif %}
     
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>
