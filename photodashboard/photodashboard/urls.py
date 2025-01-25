@@ -14,9 +14,14 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+# photodashboard/urls.py
+
 from django.contrib import admin
 from django.urls import path
+from photoapp.views import home, search  # Import the search view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', home, name='home'),  # Home page
+    path('search/', search, name='search'),  # Search page
 ]

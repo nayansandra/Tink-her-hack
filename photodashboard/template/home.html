@@ -1,0 +1,61 @@
+<!-- template/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Photo Management</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .event-poster {
+            margin: 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container text-center">
+    <h1 class="mt-5">Welcome to the Event Photo Management</h1>
+    
+    <!-- Search Bar -->
+    <form action="{% url 'search' %}" method="GET">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Search for events or photos..." name="query" aria-label="Search">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="submit">Search</button>
+            </div>
+        </div>
+    </form>
+
+    <!-- Event Posters Grid -->
+    <div class="row">
+        <!-- Example of Event Posters -->
+        <div class="col-md-4 event-poster" onclick="window.location.href='/gallery/event1/'">
+            <img src="path_to_event1_poster.jpg" alt="Event 1" class="img-fluid">
+            <h5>Event Name 1</h5>
+            <p>Date: January 25, 2025</p>
+        </div>
+        <div class="col-md-4 event-poster" onclick="window.location.href='/gallery/event2/'">
+            <img src="path_to_event2_poster.jpg" alt="Event 2" class="img-fluid">
+            <h5>Event Name 2</h5>
+            <p>Date: February 10, 2025</p>
+        </div>
+        <div class="col-md-4 event-poster" onclick="window.location.href='/gallery/event3/'">
+            <img src="path_to_event3_poster.jpg" alt="Event 3" class="img-fluid">
+            <h5>Event Name 3</h5>
+            <p>Date: March 15, 2025</p>
+        </div>
+        <!-- Add more event posters as needed -->
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
