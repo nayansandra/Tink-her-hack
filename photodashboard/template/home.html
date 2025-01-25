@@ -1,4 +1,4 @@
-<!-- template/home.html -->
+<!-- templates/home.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,7 +77,7 @@
         <div class="col-md-4 text-center">
             <h1>Welcome to the Event Photo Management</h1>
             
-            <!-- Search Bar -->
+            <!-- Search Button -->
             <form action="{% url 'search' %}" method="GET">
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Search for events or photos..." name="query" aria-label="Search">
@@ -129,11 +129,17 @@
             <!-- Add more contributors as needed -->
         </div>
     </div>
+
+    <!-- Upload Button at the Bottom -->
+    <div class="text-center mt-4">
+        <a href="{% url 'upload_file' %}" class="btn btn-success">Upload New Event Photo</a> <!-- Link to upload page -->
+    </div>
+
 </div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>
