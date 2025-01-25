@@ -23,5 +23,6 @@ from photoapp.views import home, search  # Import the search view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),  # Home page
-    path('search/', search, name='search'),  # Search page
+    path('search/', search, name='search'), 
+     # Search page
 ]

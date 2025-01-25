@@ -1,19 +1,32 @@
-<!-- template/search_results.html -->
+<!-- templates/search_results.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Results</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-<h1>Search Results for "{{ query }}"</h1>
+<div class="container mt-5">
+    <h1>Search Results</h1>
 
-<!-- Display your search results here -->
-<p>No results found.</p> <!-- Placeholder for actual results -->
+    {% if results %}
+        <ul class="list-group">
+            {% for result in results %}
+                <li class="list-group-item">{{ result.name }} - {{ result.location }} - {{ result.date }}</li> <!-- Adjust fields as necessary -->
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No results found.</p>
+    {% endif %}
+    
+</div>
 
-<a href="{% url 'home' %}">Go back to Home</a>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>

@@ -11,4 +11,8 @@ def search(request):
     context = {
         'query': query,
     }
-    return render(request, 'search_results.html', context)  
+    return render(request, 'search_results.html', context) 
+ 
+def search(request):
+    return render(request, 'search.html')
+
