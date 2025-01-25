@@ -18,6 +18,8 @@
 </head>
 <body>
 
+{% load static %}  <!-- Load static files template tag -->
+
 <div class="container text-center">
     <h1 class="mt-5">Welcome to the Event Photo Management</h1>
     
@@ -33,23 +35,21 @@
 
     <!-- Event Posters Grid -->
     <div class="row">
-        <!-- Example of Event Posters -->
         <div class="col-md-4 event-poster" onclick="window.location.href='/gallery/event1/'">
-            <img src="path_to_event1_poster.jpg" alt="Event 1" class="img-fluid">
+            <img src="{% static 'images/event1_poster.jpg' %}" alt="Event 1" class="img-fluid">
             <h5>Event Name 1</h5>
             <p>Date: January 25, 2025</p>
         </div>
         <div class="col-md-4 event-poster" onclick="window.location.href='/gallery/event2/'">
-            <img src="path_to_event2_poster.jpg" alt="Event 2" class="img-fluid">
+            <img src="{% static 'images/event2_poster.jpg' %}" alt="Event 2" class="img-fluid">
             <h5>Event Name 2</h5>
             <p>Date: February 10, 2025</p>
         </div>
         <div class="col-md-4 event-poster" onclick="window.location.href='/gallery/event3/'">
-            <img src="path_to_event3_poster.jpg" alt="Event 3" class="img-fluid">
+            <img src="{% static 'images/event3_poster.jpg' %}" alt="Event 3" class="img-fluid">
             <h5>Event Name 3</h5>
             <p>Date: March 15, 2025</p>
         </div>
-        <!-- Add more event posters as needed -->
     </div>
 </div>
 
