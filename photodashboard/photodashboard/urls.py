@@ -24,5 +24,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),  # Home page
     path('search/', search, name='search'), 
-    path('search-results/', search_results, name='search_results'), # Search page
+     # Search page
 ]
