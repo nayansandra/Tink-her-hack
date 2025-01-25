@@ -1,4 +1,4 @@
-<!-- templates/home.html -->
+<!-- template/home.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,6 +48,11 @@
         .btn-block {
             margin-bottom: 10px; /* Space between buttons */
         }
+        .badge {
+            background-color: #007bff; /* Bootstrap primary color */
+            color: white;
+            margin-left: 10px; /* Space between name and badge */
+        }
     </style>
 </head>
 <body>
@@ -59,7 +64,7 @@
         <!-- Left Side: User Details -->
         <div class="col-md-4 user-details">
             <h3>User Details</h3>
-            <img src="{% static 'images/profile_picture.jpg' %}" alt="Profile Picture" class="img-fluid rounded-circle mb-3">
+            <img src="{% static 'images/user_b_avatar.jpg' %}" alt="Profile Picture" class="img-fluid rounded-circle mb-3">
             <p><strong>User ID:</strong> user123</p> <!-- Replace with dynamic user ID -->
             
             <button class="btn btn-primary btn-block">My Uploads</button>
@@ -72,11 +77,14 @@
         <div class="col-md-4 text-center">
             <h1>Welcome to the Event Photo Management</h1>
             
-            <!-- Search Button -->
-            <form action="{% url 'search' %}" method="GET"> <!-- Redirects to the search options page -->
-                <button class="btn btn-primary" type="submit">Search Events</button>
-                <!-- Optionally, you can add an icon or text next to the button -->
-                <!-- <span>Search for events or photos...</span> -->
+            <!-- Search Bar -->
+            <form action="{% url 'search' %}" method="GET">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Search for events or photos..." name="query" aria-label="Search">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit">Search</button>
+                    </div>
+                </div>
             </form>
 
             <!-- Event Posters Grid -->
@@ -106,12 +114,15 @@
             
             <!-- Leaderboard Items -->
             <div class="leaderboard-item">
+                <img src="{% static 'images/user_a_avatar.jpg' %}" alt="User A Avatar" style="width:40px; height:auto; border-radius:50%;">
                 <span>User A</span><span>25 uploads</span><span class="badge">Gold</span> <!-- Example badge -->
             </div>
             <div class="leaderboard-item">
+                <img src="{% static 'images/user_b_avatar.jpg' %}" alt="User B Avatar" style="width:40px; height:auto; border-radius:50%;">
                 <span>User B</span><span>20 uploads</span><span class="badge">Silver</span> <!-- Example badge -->
             </div>
             <div class="leaderboard-item">
+                <img src="{% static 'images/user_c_avatar.jpg' %}" alt="User C Avatar" style="width:40px; height:auto; border-radius:50%;">
                 <span>User C</span><span>15 uploads</span><span class="badge">Bronze</span> <!-- Example badge -->
             </div>
             
