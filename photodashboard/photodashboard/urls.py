@@ -18,18 +18,19 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-from photoapp.views import home, search, upload_file  # Import the search view
+from photoapp.views import home, search, upload_file, event1_view, event2_view, event3_view # Import the search view
 from django.conf import settings
 from django.conf.urls.static import static
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),  # Home page
     path('search/', search, name='search'),
     path('upload/', upload_file, name='upload_file'), 
-    path('event_1/', lambda request: render(request, 'event1.html'), name='event_1'),
-    path('event_2/', lambda request: render(request, 'event2.html'), name='event_2'),
-    path('event_3/', lambda request: render(request, 'event3.html'), name='event_3'),
+   path('event_1/', event1_view, name='event_1'),
+    path('event_2/', event2_view, name='event_2'),
+    path('event_3/', event3_view, name='event_3'),
      # Search page
 ]
 

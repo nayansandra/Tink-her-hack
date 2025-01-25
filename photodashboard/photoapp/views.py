@@ -50,3 +50,13 @@ def search_results(request):
     
     return render(request, 'search_results.html', {'results': results, 'query': query})
 
+
+
+def event1_view(request):
+    return render(request, 'event1.html')
+
+def event2_view(request):
+    return render(request, 'event2.html')
+
+def event3_view(request):
+    return render(request, 'event3.html')
