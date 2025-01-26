@@ -157,7 +157,7 @@ This video demonstrates how to upload photos, manage them, and utilize tags effe
 
  Additional Demos
  
-https://github.com/tinkerhub/tink-her-hack-3-temp.git
+https://github.com/DEVIKASAJI/Tink-her-hack.git
 
 Made with ❤️ at TinkerHub
 
