@@ -29,27 +29,38 @@ Team Members
 
  Hosted Project Link
 https://tink-her-hack-sopg.vercel.app/
+
+
  Project Description  
+ 
 The project is a webbased platform designed to manage and share photos from college events. It enables students, event organizers, and faculty members to upload, organize, and access eventrelated photos effortlessly. The platform allows users to search for photos by event name, date, or location and view them in a categorized gallery. With secure user authentication, a responsive design, and advanced search functionality, the app creates a central hub for preserving and sharing campus memories.
+
+
  Problem Statement  
+ 
 In many colleges, photos captured during events are often scattered across personal devices, social media platforms, or remain inaccessible to the majority of students and faculty. This fragmentation leads to lost memories, difficulty in retrieving eventspecific photos, and a lack of a centralized repository for media assets.  
+
 Challenges include:  
+
  Lack of centralized storage for event photos.  
  Inability to search for event photos by specific attributes like event name, date, or location.  
  Limited accessibility to photos for students who didn't capture or receive them directly.  
  Difficulty in sharing photos across the student community.
 
- Solution  
+ Solution 
+ 
 The proposed solution is a web application that acts as a centralized photo repository for all college events.  
 
 Key features of the solution include:  
+
 1. Centralized Photo Storage: A secure platform where all eventrelated photos are uploaded and stored in one place.  
 2. EventBased Categorization: Photos are tagged and categorized by event name, date, and location for easy access.  
 3. Search Functionality: Advanced keyword search allows users to find photos using event names, dates, or locations.  
 4. Event Timeline View: A visual timeline displays events in chronological order, making it easy to explore past events.  
 5. MultiUser Uploads: Students and organizers can upload their photos, ensuring comprehensive coverage of events.  
 6. Secure User Access: Only authorized users can access or upload photos, ensuring privacy and safety.  
-7. Responsive Design: Works seamlessly across devices, ensuring easy access for everyone.  
+7. Responsive Design: Works seamlessly across devices, ensuring easy access for everyone.
+     
 
 By addressing these challenges, the platform ensures that all students and faculty have equal access to event photos, fostering a sense of community and preserving campus memories in an organized and accessible way.
  Technical Details
@@ -63,7 +74,9 @@ By addressing these challenges, the platform ensures that all students and facul
  Tools required:
    Web browser (Chrome, Firefox)
 
+
  Implementation
+ 
  For Software:
  Installation
 To set up the project locally, use the following commands:
@@ -88,6 +101,7 @@ python manage.py runserver
  For Software:
 
  Screenshots 
+ 
  ![Screenshot 2025-01-26 092003](https://github.com/user-attachments/assets/535fb18c-9009-4105-be20-52acca79faeb)
 
  
@@ -104,7 +118,9 @@ This screenshot displays the upload form where users can drag and drop files or 
  
  
  Diagrams
+ 
 Workflow 
+
 This diagram illustrates the workflow of the application from photo upload to retrieval.
 [Start] 
    ↓
@@ -129,6 +145,8 @@ Yes
 [User Can Retrieve Photos]
    ↓
 [End]
+
+
  Project Demo
  
 
@@ -138,6 +156,7 @@ https://www.loom.com/share/f6e373ade2ce465b978660e664d9ebbd?sid=0a4b8418-2e34-48
 This video demonstrates how to upload photos, manage them, and utilize tags effectively.
 
  Additional Demos
+ 
 https://github.com/tinkerhub/tink-her-hack-3-temp.git
 
 Made with ❤️ at TinkerHub
